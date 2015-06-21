@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Js</title>
+
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+<style>
+#colorContainer div {
+color: white;
+text-transform: uppercase;
+width: 200px;
+padding: 10px;
+margin:5px;
+border-radius: 5px;
+-moz-border-radius: 5px;
+}
+</style>
+</head>
+
+<body ng-app="myApp" ng-controller="myProductDetailCtrl">
+		
+	<h2>AngularJS Socks</h2>
+	<p>Keep warm this winter with our 100% wool, 100% cool, AngularJS socks!</p>
+	<button type="button" ng-click="showHideColors()">
+		{{isHidden ? 'Show Avaliable Colors' : 'Hide Avaliable Colors'}}
+	</button>
+
+	<input type="text" ng-model="name" ng-init="name='Hero-Zero'">
+
+	<p>{{name | suraj}}</p>
+
+	<div color-list colors="colorsArray"></div>
+
+</body>
+</html>

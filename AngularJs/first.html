@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Js</title>
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="angular-route.min.js"></script>
+	<script type="text/javascript" src="first.js"></script>
+
+<script type="text/javascript">
+
+</script>
+
+</head>
+
+<body ng-app="myApp">
+
+	<h1>Hello {{'Wor'+'ld'}}</h1> </br>
+
+	<div ng-controller="GreetingsCtrl">
+		<input type="text" ng-model="name">
+		<label>Your name</label></br></br>
+		<button type="button" ng-click="showGreetings()">
+			{{isHidden ? 'Hide Greetings' : 'Show Greetings'}}
+		</button>
+		<p ng-show="isHidden" >{{ "Hi " + name }}</p></br></br>
+	</div>
+
+	<button ng-click="count = count + 1" ng-init="count=5">Incement</button>
+	<p>Count Is : {{ count }}</p>
+<!-- 
+	<div ng-view></div>
+
+	<a href="view1.html">view1</a> -->
+</body>
+</html>

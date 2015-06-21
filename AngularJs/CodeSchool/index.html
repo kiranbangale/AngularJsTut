@@ -1,0 +1,31 @@
+<!-- <!DOCTYPE html>
+<html ng-app="gemStore">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Filter Demo</title>
+<script src="angular.min.js"></script>
+<script>
+	myAppModule.filter('stripDashes', function () {
+	// the function we are in returns
+	// the function below
+	return function(txt) {
+	return textToFilter.split('-').join(' ');
+	};
+	});
+</script>
+</head>
+<body ng-app="myAppModule" ng-controller="MyFilterDemoCtrl">
+<p>Plan type: {{data.plan}}</p>
+<p>Plan type: {{data.plan | stripDashes}}</p>
+</body>
+</html>
